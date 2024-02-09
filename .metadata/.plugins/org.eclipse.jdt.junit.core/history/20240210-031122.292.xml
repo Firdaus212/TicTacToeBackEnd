@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TicTacToeGameTest" project="TicTacToeGame" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="test.TicTacToeGameTest" time="3.154" displayname="TicTacToeGameTest" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]">
-    <testcase name="actionPerformedMultiplePlayerTextNotEmptyTest" classname="test.TicTacToeGameTest" time="2.178" displayname="actionPerformedMultiplePlayerTextNotEmptyTest()" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]/[method:actionPerformedMultiplePlayerTextNotEmptyTest()]"/>
-    <testcase name="testMultiplePlayerMode" classname="test.TicTacToeGameTest" time="0.077" displayname="testMultiplePlayerMode()" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]/[method:testMultiplePlayerMode()]"/>
-    <testcase name="actionPerformedSinglePlayerTextEmptyTest" classname="test.TicTacToeGameTest" time="0.838" displayname="actionPerformedSinglePlayerTextEmptyTest()" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]/[method:actionPerformedSinglePlayerTextEmptyTest()]"/>
-    <testcase name="actionPerformedMultiplePlayerTextEmptyTest" classname="test.TicTacToeGameTest" time="0.058" displayname="actionPerformedMultiplePlayerTextEmptyTest()" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]/[method:actionPerformedMultiplePlayerTextEmptyTest()]"/>
-  </testsuite>
-</testrun>

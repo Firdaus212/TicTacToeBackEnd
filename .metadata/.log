@@ -1241,3 +1241,18 @@ java.util.ConcurrentModificationException
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.core.jobs 2 2 2024-02-10 03:27:21.912
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.eclemma.internal.core.launching.AgentServer
+
+!ENTRY org.eclipse.core.jobs 2 2 2024-02-10 03:27:21.914
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.eclemma.internal.core.launching.AgentServer
+
+!ENTRY org.eclipse.core.jobs 2 2 2024-02-10 03:27:21.916
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.eclemma.internal.core.launching.AgentServer
+
+!ENTRY org.eclipse.core.jobs 2 2 2024-02-10 03:27:21.918
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.eclemma.internal.core.launching.AgentServer
+
+!ENTRY org.eclipse.core.jobs 2 2 2024-02-10 03:27:21.939
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.eclemma.internal.core.launching.AgentServer

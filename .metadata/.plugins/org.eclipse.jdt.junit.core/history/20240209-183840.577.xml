@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="GameInitializerTest.test" project="TicTacToeGame" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="test.GameInitializerTest" time="2.732" displayname="GameInitializerTest" uniqueid="[engine:junit-jupiter]/[class:test.GameInitializerTest]">
-    <testcase name="test" classname="test.GameInitializerTest" time="2.732" displayname="test()" uniqueid="[engine:junit-jupiter]/[class:test.GameInitializerTest]/[method:test()]"/>
-  </testsuite>
-</testrun>

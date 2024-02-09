@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TicTacToeGameTest" project="TicTacToeGame" tests="3" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="test.TicTacToeGameTest" time="0.568" displayname="TicTacToeGameTest" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]">
-    <testcase name="actionPerformedTextEmptyTest" classname="test.TicTacToeGameTest" time="0.4" displayname="actionPerformedTextEmptyTest()" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]/[method:actionPerformedTextEmptyTest()]"/>
-    <testcase name="test" classname="test.TicTacToeGameTest" time="0.074" displayname="test()" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]/[method:test()]"/>
-    <testcase name="actionPerformedTextNotEmptyTest" classname="test.TicTacToeGameTest" time="0.091" displayname="actionPerformedTextNotEmptyTest()" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]/[method:actionPerformedTextNotEmptyTest()]"/>
-  </testsuite>
-</testrun>

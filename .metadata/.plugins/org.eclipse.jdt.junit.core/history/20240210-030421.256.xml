@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TicTacToeGameTest" project="TicTacToeGame" tests="3" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="test.TicTacToeGameTest" time="2.557" displayname="TicTacToeGameTest" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]">
-    <testcase name="actionPerformedTextEmptyTest" classname="test.TicTacToeGameTest" time="2.414" displayname="actionPerformedTextEmptyTest()" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]/[method:actionPerformedTextEmptyTest()]"/>
-    <testcase name="actionPerformedMultiplePlayerTextNotEmptyTest" classname="test.TicTacToeGameTest" time="0.063" displayname="actionPerformedMultiplePlayerTextNotEmptyTest()" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]/[method:actionPerformedMultiplePlayerTextNotEmptyTest()]"/>
-    <testcase name="testMultiplePlayerMode" classname="test.TicTacToeGameTest" time="0.076" displayname="testMultiplePlayerMode()" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]/[method:testMultiplePlayerMode()]"/>
-  </testsuite>
-</testrun>

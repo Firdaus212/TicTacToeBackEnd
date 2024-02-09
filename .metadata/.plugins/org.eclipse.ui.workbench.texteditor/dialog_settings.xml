@@ -6,11 +6,16 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="check"/>
+		<item key="selection" value="restartButton"/>
 		<list key="findhistory">
+			<item value="restartButton"/>
+			<item value="restartGame"/>
+			<item value="actionPerformed"/>
+			<item value="textfield"/>
+			<item value="makeCPUMove"/>
+			<item value="endGame"/>
 			<item value="check"/>
 			<item value="9"/>
-			<item value="actionPerformed"/>
 			<item value="frame"/>
 		</list>
 		<list key="replacehistory">

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TicTacToeGameTest.actionPerformedMultiplePlayerTextNotEmptyTest" project="TicTacToeGame" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="test.TicTacToeGameTest" time="2.334" displayname="TicTacToeGameTest" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]">
-    <testcase name="actionPerformedMultiplePlayerTextNotEmptyTest" classname="test.TicTacToeGameTest" time="2.334" displayname="actionPerformedMultiplePlayerTextNotEmptyTest()" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]/[method:actionPerformedMultiplePlayerTextNotEmptyTest()]"/>
-  </testsuite>
-</testrun>
