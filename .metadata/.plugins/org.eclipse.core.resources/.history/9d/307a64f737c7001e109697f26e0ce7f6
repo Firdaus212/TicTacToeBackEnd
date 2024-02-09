@@ -1,0 +1,16 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import main.TicTacToeApplication;
+
+public class TicTacToeApplicationTest {
+    
+    @Test
+    public void TicTacToeApplicationTest() {
+        // Simply test that the main method does not throw any exceptions
+    	TicTacToeApplication.main(new String[] {});
+    }
+}

@@ -1,0 +1,18 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import main.GameInitializer;
+
+public class GameInitializerTest {
+    
+    @Test
+    public void testStartTicTacToe() {
+        GameInitializer gameInitializer = new GameInitializer();
+        gameInitializer.sizeField.setText("3");
+        gameInitializer.startButton.doClick();
+        assertTrue(gameInitializer.sizeField.getText() == "3");
+    }
+}

@@ -1,0 +1,24 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import main.GameInitializer;
+
+public class GameInitializerTest {
+    
+    @Test
+    public void testStartTicTacToe() {
+        GameInitializer gameInitializer = new GameInitializer();
+        
+        // Simulate user input by setting the size field
+        gameInitializer.sizeField.setText("3");
+        
+        // Simulate button click to start the game
+        gameInitializer.startButton.doClick();
+        
+        // Check that the TicTacToeGame frame is visible
+        assertTrue(gameInitializer.isVisible());
+    }
+}

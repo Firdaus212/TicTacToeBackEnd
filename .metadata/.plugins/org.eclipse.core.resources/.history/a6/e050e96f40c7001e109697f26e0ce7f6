@@ -1,0 +1,38 @@
+package test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import main.CheckRowAndColumn;
+import main.TicTacToeGame;
+
+class TicTacToeGameTest {
+
+	@BeforeEach
+	void setUp() throws Exception {
+	}
+
+	@Test
+	void test() {
+		TicTacToeGame ticTacToeGame = new TicTacToeGame(3, false, new CheckRowAndColumn());
+
+		// Set the first button's text to "X" to simulate a player move
+		ticTacToeGame.buttons[0].setText("X");
+
+		// Call makeCPUMove method
+		ticTacToeGame.makeCPUMove(ticTacToeGame.buttons[0]);
+
+		// Check that the CPU has made a move by setting a button text to "O"
+		boolean cpuMoved = false;
+		for (int i = 0; i < ticTacToeGame.buttons.length; i++) {
+			if (ticTacToeGame.buttons[i].getText().equals("O")) {
+				cpuMoved = true;
+				break;
+			}
+		}
+		assertTrue(cpuMoved);
+	}
+
+}

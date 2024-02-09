@@ -1,0 +1,24 @@
+package test;
+
+import static org.junit.jupiter.api.Assertions.fail;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import main.CheckRowAndColumn;
+
+class CheckRowAndColumnTest {
+	
+	CheckRowAndColumn checkRowAndColumn;
+
+	@BeforeEach
+	void setUp() throws Exception {
+		checkRowAndColumn = new CheckRowAndColumn();
+	}
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,94 @@
+import java.util.Scanner;
+
+public class TicTacToe {
+    private char[][] board;
+    private int size;
+    private char currentPlayer;
+
+    public TicTacToe(int size) {
+        this.size = size;
+        this.board = new char[size][size];
+        this.currentPlayer = 'X';
+        initializeBoard();
+    }
+
+    private void initializeBoard() {
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                board[i][j] = '-';
+            }
+        }
+    }
+
+    public void printBoard() {
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                System.out.print(board[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public boolean makeMove(int row, int col) {
+        if (row < 0 || row >= size || col < 0 || col >= size || board[row][col] != '-') {
+            return false;
+        }
+        board[row][col] = currentPlayer;
+        return true;
+    }
+
+    public boolean checkWin() {
+        // Check rows and columns
+        for (int i = 0; i < size; i++) {
+            if (board[i][0] == currentPlayer && board[i][1] == currentPlayer && board[i][2] == currentPlayer) {
+                return true;
+            }
+            if (board[0][i] == currentPlayer && board[1][i] == currentPlayer && board[2][i] == currentPlayer) {
+                return true;
+            }
+        }
+        // Check diagonals
+        if (board[0][0] == currentPlayer && board[1][1] == currentPlayer && board[2][2] == currentPlayer) {
+            return true;
+        }
+        if (board[0][2] == currentPlayer && board[1][1] == currentPlayer && board[2][0] == currentPlayer) {
+            return true;
+        }
+        return false;
+    }
+
+    public void switchPlayer() {
+        currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Welcome to Tic Tac Toe!");
+
+        // Get the size of the board
+        System.out.println("Enter the size of the board (e.g., 3 for 3x3): ");
+        int size = scanner.nextInt();
+        TicTacToe game = new TicTacToe(size);
+
+        boolean gameOver = false;
+        while (!gameOver) {
+            System.out.println("Current board:");
+            game.printBoard();
+            System.out.println("Player " + game.currentPlayer + "'s turn. Enter row and column (0-indexed):");
+            int row = scanner.nextInt();
+            int col = scanner.nextInt();
+
+            if (game.makeMove(row, col)) {
+                if (game.checkWin()) {
+                    System.out.println("Player " + game.currentPlayer + " wins!");
+                    gameOver = true;
+                } else {
+                    game.switchPlayer();
+                }
+            } else {
+                System.out.println("Invalid move! Try again.");
+            }
+        }
+        scanner.close();
+    }
+}

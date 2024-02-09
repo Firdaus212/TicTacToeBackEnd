@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="test" project="TicTacToeGame" tests="9" started="9" failures="0" errors="0" ignored="0">
+  <testsuite name="test.TicTacToeGameTest" time="3.685" displayname="TicTacToeGameTest" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]">
+    <testcase name="switchModeTest" classname="test.TicTacToeGameTest" time="0.501" displayname="switchModeTest()" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]/[method:switchModeTest()]"/>
+    <testcase name="actionPerformedMultiplePlayerTextNotEmptyTest" classname="test.TicTacToeGameTest" time="1.344" displayname="actionPerformedMultiplePlayerTextNotEmptyTest()" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]/[method:actionPerformedMultiplePlayerTextNotEmptyTest()]"/>
+    <testcase name="restartGameTest" classname="test.TicTacToeGameTest" time="0.14" displayname="restartGameTest()" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]/[method:restartGameTest()]"/>
+    <testcase name="testMultiplePlayerMode" classname="test.TicTacToeGameTest" time="0.054" displayname="testMultiplePlayerMode()" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]/[method:testMultiplePlayerMode()]"/>
+    <testcase name="actionPerformedSinglePlayerTextEmptyTest" classname="test.TicTacToeGameTest" time="0.888" displayname="actionPerformedSinglePlayerTextEmptyTest()" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]/[method:actionPerformedSinglePlayerTextEmptyTest()]"/>
+    <testcase name="actionPerformedSinglePlayerModePlayer2TurnTest" classname="test.TicTacToeGameTest" time="0.698" displayname="actionPerformedSinglePlayerModePlayer2TurnTest()" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]/[method:actionPerformedSinglePlayerModePlayer2TurnTest()]"/>
+    <testcase name="actionPerformedMultiplePlayerTextEmptyTest" classname="test.TicTacToeGameTest" time="0.054" displayname="actionPerformedMultiplePlayerTextEmptyTest()" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeGameTest]/[method:actionPerformedMultiplePlayerTextEmptyTest()]"/>
+  </testsuite>
+  <testsuite name="test.GameInitializerTest" time="3.801" displayname="GameInitializerTest" uniqueid="[engine:junit-jupiter]/[class:test.GameInitializerTest]">
+    <testcase name="test" classname="test.GameInitializerTest" time="3.801" displayname="test()" uniqueid="[engine:junit-jupiter]/[class:test.GameInitializerTest]/[method:test()]"/>
+  </testsuite>
+  <testsuite name="test.TicTacToeApplicationTest" time="0.003" displayname="TicTacToeApplicationTest" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeApplicationTest]">
+    <testcase name="test" classname="test.TicTacToeApplicationTest" time="0.003" displayname="test()" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeApplicationTest]/[method:test()]"/>
+  </testsuite>
+</testrun>

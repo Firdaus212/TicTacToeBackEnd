@@ -1,0 +1,17 @@
+package test;
+
+import static org.junit.Assert.*;
+import main.GameInitializer;
+import main.TicTacToeApplication;
+
+import org.junit.Test;
+
+public class TicTacToeApplicationTest {
+    
+    @Test
+    public void TicTacToeApplicationTest() {
+        // Simply test that the main method does not throw any exceptions
+    	TicTacToeApplication.main(new String[] {});
+    	 assertTrue(GameInitializer.getInstance() != null);
+    }
+}

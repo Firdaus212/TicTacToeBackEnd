@@ -1,0 +1,40 @@
+import java.util.Random;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class TicTacToeGameData {
+	public JFrame frame;
+	public JPanel button_panel;
+	public JLabel textfield;
+	public JButton[] buttons;
+	public boolean player1_turn;
+	public boolean singlePlayerMode;
+	public int boardSize;
+	public Random random;
+	public JButton restartButton;
+	public JButton modeButton;
+
+	public TicTacToeGameData(JFrame frame, JPanel button_panel, JLabel textfield, Random random) {
+		this.frame = frame;
+		this.button_panel = button_panel;
+		this.textfield = textfield;
+		this.random = random;
+	}
+	
+	public void checkWin() {
+		String[][] board = new String[data.boardSize][data.boardSize];
+		int index = 0;
+		for (int i = 0; i < data.boardSize; i++) {
+			for (int j = 0; j < data.boardSize; j++) {
+				board[i][j] = data.buttons[index++].getText();
+			}
+		}
+
+		if (checkRows(board) || checkColumns(board) || checkDiagonals(board)) {
+			endGame();
+		}
+	}
+}

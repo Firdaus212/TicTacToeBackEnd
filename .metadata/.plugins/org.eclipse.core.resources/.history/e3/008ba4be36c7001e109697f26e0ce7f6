@@ -1,0 +1,10 @@
+package main;
+
+
+public class TicTacToeApplication {
+	
+	public static void TicTacToeApplication(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+        });
+    }
+}

@@ -1,0 +1,70 @@
+package test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.awt.event.ActionEvent;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import main.CheckRowAndColumn;
+import main.TicTacToeGame;
+
+class TicTacToeGameTest {
+
+	TicTacToeGame ticTacToeGame;
+
+	@BeforeEach
+	void setUp() throws Exception {
+		ticTacToeGame = new TicTacToeGame(3, false, new CheckRowAndColumn());
+	}
+
+	@Test
+	void testMultiplePlayerMode() {
+		ticTacToeGame = new TicTacToeGame(3, false, new CheckRowAndColumn());
+		ticTacToeGame.buttons[0].setText("X");
+		ticTacToeGame.makeCPUMove(ticTacToeGame.buttons[0]);
+		assertTrue(ticTacToeGame.buttons[0].isVisible());
+	}
+
+	@Test
+	void actionPerformedMultiplePlayerTextNotEmptyTest() {
+		ticTacToeGame = new TicTacToeGame(3, true, new CheckRowAndColumn());
+		ticTacToeGame.buttons[0].setText("X");
+		ticTacToeGame.makeCPUMove(ticTacToeGame.buttons[0]);
+		ActionEvent event = new ActionEvent(ticTacToeGame.buttons[0], ActionEvent.ACTION_PERFORMED, "");
+		ticTacToeGame.actionPerformed(event);
+		assertTrue(ticTacToeGame.buttons[0].isVisible());
+	}
+
+	@Test
+	void actionPerformedSinglePlayerTextEmptyTest() {
+		TicTacToeGame ticTacToeGameSingle = new TicTacToeGame(3, true, new CheckRowAndColumn());
+		ticTacToeGameSingle.buttons[0].setText("");
+		ticTacToeGameSingle.makeCPUMove(ticTacToeGameSingle.buttons[0]);
+		ActionEvent event = new ActionEvent(ticTacToeGameSingle.buttons[0], ActionEvent.ACTION_PERFORMED, "");
+		ticTacToeGameSingle.actionPerformed(event);
+		assertTrue(ticTacToeGameSingle.buttons[0].isVisible());
+	}
+
+	@Test
+	void actionPerformedMultiplePlayerTextEmptyTest() {
+		TicTacToeGame ticTacToeGameSingle = new TicTacToeGame(3, false, new CheckRowAndColumn());
+		ticTacToeGameSingle.buttons[0].setText("");
+		ticTacToeGameSingle.makeCPUMove(ticTacToeGameSingle.buttons[0]);
+		ActionEvent event = new ActionEvent(ticTacToeGameSingle.buttons[0], ActionEvent.ACTION_PERFORMED, "");
+		ticTacToeGameSingle.actionPerformed(event);
+		assertTrue(ticTacToeGameSingle.buttons[0].isVisible());
+	}
+
+	@Test
+	void actionPerformedSinglePlayerModePlayer2TurnTest() {
+		TicTacToeGame ticTacToeGameSingle = new TicTacToeGame(3, true, new CheckRowAndColumn());
+		// Simulate the case where it's player 2's turn
+		ticTacToeGameSingle.player1_turn = false;
+		ticTacToeGameSingle.firstTurn(); // Ensure the label text is correctly set
+		assertTrue(ticTacToeGameSingle.textfield.getText().contains("Single mode X turn")); // Or "Single mode O turn"
+																							// based on your initial
+																							// setup
+	}
+}

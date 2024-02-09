@@ -1,0 +1,104 @@
+import java.awt.*;
+import java.awt.event.*;
+import java.util.ArrayList;
+import java.util.Random;
+
+import javax.swing.*;
+
+public class TicTacToeGame implements ActionListener {
+	private JFrame frame = new JFrame();
+	private JPanel button_panel = new JPanel();
+	private JLabel textfield = new JLabel();
+	private JButton[] buttons;
+	private boolean player1_turn;
+	private boolean singlePlayerMode;
+	private int boardSize;
+	private Random random = new Random();
+	private CheckTheWinner checkTheWinner;
+
+	private JButton restartButton;
+	private JButton modeButton;
+
+	public TicTacToeGame(int size, boolean singlePlayerMode) {
+		this.boardSize = size;
+		this.singlePlayerMode = singlePlayerMode;
+		initializeFrame();
+		initializeButtons();
+		initializeBottomPanel();
+
+		firstTurn();
+	}
+
+	private void initializeFrame() {
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(800, 800);
+		frame.getContentPane().setBackground(new Color(50, 50, 50));
+		frame.setLayout(new BorderLayout());
+		frame.setVisible(true);
+
+		textfield.setBackground(new Color(25, 25, 25));
+		textfield.setForeground(new Color(25, 255, 0));
+		textfield.setFont(new Font("Ink Free", Font.BOLD, 75));
+		textfield.setHorizontalAlignment(JLabel.CENTER);
+		textfield.setText("Tic-Tac-Toe");
+		textfield.setOpaque(true);
+
+		frame.add(textfield, BorderLayout.NORTH);
+		frame.add(button_panel, BorderLayout.CENTER);
+	}
+
+	private void initializeButtons() {
+		button_panel.setLayout(new GridLayout(boardSize, boardSize));
+		button_panel.setBackground(new Color(150, 150, 150));
+
+		buttons = new JButton[boardSize * boardSize];
+		for (int i = 0; i < buttons.length; i++) {
+			buttons[i] = new JButton();
+			button_panel.add(buttons[i]);
+			buttons[i].setFont(new Font("MV Boli", Font.BOLD, 120));
+			buttons[i].setFocusable(false);
+			buttons[i].addActionListener(this);
+		}
+	}
+
+	private void initializeBottomPanel() {
+		restartButton = new JButton("Restart");
+		restartButton.addActionListener(e -> checkTheWinner.restartGame());
+
+		modeButton = new JButton("Switch Mode");
+		modeButton.addActionListener(e -> checkTheWinner.switchMode());
+
+		JPanel bottomPanel = new JPanel();
+		bottomPanel.setLayout(new FlowLayout());
+		bottomPanel.add(restartButton);
+		bottomPanel.add(modeButton);
+
+		frame.add(bottomPanel, BorderLayout.SOUTH);
+	}
+
+	private void firstTurn() {
+		player1_turn = random.nextBoolean();
+		textfield.setText(player1_turn ? "X turn" : "O turn");
+
+		if (singlePlayerMode && !player1_turn) {
+			makeCPUMove();
+		}
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		JButton clickedButton = (JButton) e.getSource();
+		if (clickedButton.getText().isEmpty()) {
+			clickedButton.setText(player1_turn ? "X" : "O");
+			player1_turn = !player1_turn;
+			textfield.setText(player1_turn ? "X turn" : "O turn");
+
+			if (singlePlayerMode && !player1_turn) {
+				makeCPUMove();
+			}
+			
+			checkTheWinner.checkWin(boardSize);
+			checkTheWinner.checkDraw();
+		}
+	}
+}

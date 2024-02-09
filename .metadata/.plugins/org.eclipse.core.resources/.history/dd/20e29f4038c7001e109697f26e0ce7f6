@@ -1,0 +1,18 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import main.GameInitializer;
+import main.TicTacToeApplication;
+
+public class TicTacToeApplicationTest {
+    
+    @Test
+    public void testTicTacToeApplication() {
+        // Call the main method, which indirectly invokes the run() method
+        TicTacToeApplication.main(new String[] {});
+        assertTrue(GameInitializer.getFrames() != null);
+    }
+}

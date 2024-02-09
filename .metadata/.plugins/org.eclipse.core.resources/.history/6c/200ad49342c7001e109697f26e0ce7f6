@@ -1,0 +1,65 @@
+package test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.awt.event.ActionEvent;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import main.CheckRowAndColumn;
+import main.TicTacToeGame;
+
+class TicTacToeGameTest {
+
+	TicTacToeGame ticTacToeGame;
+
+	@BeforeEach
+	void setUp() throws Exception {
+		ticTacToeGame = new TicTacToeGame(3, false, new CheckRowAndColumn());
+	}
+
+	@Test
+	void test() {
+		ticTacToeGame = new TicTacToeGame(3, false, new CheckRowAndColumn());
+		ticTacToeGame.buttons[0].setText("X");
+		ticTacToeGame.makeCPUMove(ticTacToeGame.buttons[0]);
+		boolean cpuMoved = false;
+		for (int i = 0; i < ticTacToeGame.buttons.length; i++) {
+			if (ticTacToeGame.buttons[i].getText().equals("O")) {
+				cpuMoved = true;
+				break;
+			}
+		}
+		assertTrue(cpuMoved);
+	}
+
+	@Test
+	void actionPerformedTextNotEmptyTest() {
+		ticTacToeGame = new TicTacToeGame(3, false, new CheckRowAndColumn());
+		ticTacToeGame.buttons[0].setText("X");
+		ticTacToeGame.makeCPUMove(ticTacToeGame.buttons[0]);
+		ActionEvent event = new ActionEvent(ticTacToeGame.buttons[0], ActionEvent.ACTION_PERFORMED, "");
+		ticTacToeGame.actionPerformed(event);
+		boolean cpuMoved = false;
+		for (int i = 0; i < ticTacToeGame.buttons.length; i++) {
+			if (ticTacToeGame.buttons[i].getText().equals("O")) {
+				cpuMoved = true;
+				break;
+			}
+		}
+		assertTrue(cpuMoved);
+	}
+
+	@Test
+	void actionPerformedTextEmptyTest() {
+		TicTacToeGame ticTacToeGameSingle = new TicTacToeGame(3, true, new CheckRowAndColumn());
+		ticTacToeGameSingle = new TicTacToeGame(3, false, new CheckRowAndColumn());
+		ticTacToeGameSingle.buttons[0].setText("");
+		ticTacToeGameSingle.makeCPUMove(ticTacToeGameSingle.buttons[0]);
+		ActionEvent event = new ActionEvent(ticTacToeGameSingle.buttons[0], ActionEvent.ACTION_PERFORMED, "");
+		ticTacToeGameSingle.actionPerformed(event);
+		assertTrue(ticTacToeGame.buttons[0].getText() == "X");
+	}
+
+}

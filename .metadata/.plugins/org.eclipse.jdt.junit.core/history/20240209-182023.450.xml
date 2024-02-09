@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TicTacToeApplicationTest.test" project="TicTacToeGame" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="test.TicTacToeApplicationTest" time="0.116" displayname="TicTacToeApplicationTest" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeApplicationTest]">
+    <testcase name="test" classname="test.TicTacToeApplicationTest" time="0.116" displayname="test()" uniqueid="[engine:junit-jupiter]/[class:test.TicTacToeApplicationTest]/[method:test()]"/>
+  </testsuite>
+</testrun>

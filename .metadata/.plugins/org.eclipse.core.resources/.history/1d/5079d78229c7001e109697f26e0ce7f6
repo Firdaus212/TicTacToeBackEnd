@@ -1,0 +1,80 @@
+import java.awt.Color;
+
+import javax.swing.JButton;
+
+public class CheckRowAndColumn {
+	public boolean checkRows(String[][] board, int boardSize, JButton[] buttons) {
+		for (int i = 0; i < boardSize; i++) {
+			String firstCell = board[i][0];
+			boolean win = true;
+			for (int j = 1; j < boardSize; j++) {
+				if (!firstCell.equals(board[i][j]) || firstCell.isEmpty()) {
+					win = false;
+					break;
+				}
+			}
+			if (win) {
+				highlightWinningCells(i, 0, 0, 1);
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public boolean checkColumns(String[][] board, int boardSize, JButton[] buttons) {
+		for (int i = 0; i < boardSize; i++) {
+			String firstCell = board[0][i];
+			boolean win = true;
+			for (int j = 1; j < boardSize; j++) {
+				if (!firstCell.equals(board[j][i]) || firstCell.isEmpty()) {
+					win = false;
+					break;
+				}
+			}
+			if (win) {
+				highlightWinningCells(0, i, 1, 0);
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public boolean checkDiagonals(String[][] board, int boardSize, JButton[] buttons) {
+		String firstCell = board[0][0];
+		boolean win = true;
+		for (int i = 1; i < boardSize; i++) {
+			if (!firstCell.equals(board[i][i]) || firstCell.isEmpty()) {
+				win = false;
+				break;
+			}
+		}
+		if (win) {
+			highlightWinningCells(0, 0, 1, 1);
+			return true;
+		}
+
+		firstCell = board[0][boardSize - 1];
+		win = true;
+		for (int i = 1; i < boardSize; i++) {
+			if (!firstCell.equals(board[i][boardSize - i - 1]) || firstCell.isEmpty()) {
+				win = false;
+				break;
+			}
+		}
+		if (win) {
+			highlightWinningCells(0, boardSize - 1, 1, -1);
+			return true;
+		}
+
+		return false;
+	}
+
+	public void highlightWinningCells(int startRow, int startCol, int rowIncrement, int colIncrement) {
+		for (int i = 0; i < boardSize; i++) {
+			buttons[startRow * boardSize + startCol].setBackground(Color.GREEN);
+			startRow += rowIncrement;
+			startCol += colIncrement;
+		}
+	}
+
+}
